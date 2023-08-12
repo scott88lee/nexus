@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0"
+  },
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "scripts": {
+    "dev": "bun --hot run ./index.js"
+  }
+}
