@@ -13,6 +13,19 @@ const client = new MongoClient(
 	{ useNewUrlParser: true },
 );
 
+// Setup Templating Engine
+const { engine } = require('express-handlebars');
+const hbsConfig = {
+	// layoutsDir: __dirname + '../views/layouts',
+	layoutsDir: './views/layouts',
+	extname: 'hbs',
+	defaultLayout: 'default',
+//	helpers: require('../views/helpers')
+}
+
+app.set('view engine', 'hbs');
+app.engine('hbs', engine(hbsConfig));
+
 // Serve Static Files
 app.use('/mock', express.static('./public'));
 
